@@ -16,7 +16,7 @@ Purpose: store the models for this project for clustering and classification
 
 
 
-def k_means(training_stacked, training_labels, data_train, data_test,  predicting=False, bow=True):
+def k_means(training_stacked, training_labels, data_train, data_test,extractor='sift',  predicting=False, bow=True):
     ''' 
     Purpose: use training data to cluster all the descriptors. CLuster centroid represents a visual word 
     Input: stacked training data ()
@@ -45,8 +45,8 @@ def k_means(training_stacked, training_labels, data_train, data_test,  predictin
         
         if bow:
             print('made it here')
-            train_histograms = assessment.bag_of_words(k,kmeans, data_train)
-            test_histograms = assessment.bag_of_words(k, kmeans, data_test)
+            train_histograms = assessment.bag_of_words(k,kmeans, data_train,extractor_type=extractor)
+            test_histograms = assessment.bag_of_words(k, kmeans, data_test,extractor_type=extractor)
             support_vector(train_histograms, test_histograms, data_train, data_test, performance_metrics, k)
         
     return kmeans, accuracies, performance_metrics
