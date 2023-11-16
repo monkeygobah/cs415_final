@@ -95,7 +95,8 @@ def prepare_data(data_train, extractor_type='sift'):
     Input: training dictionary, extractor type (autoset to sift, can also be hog)
     returns appropriate data and labels formatted for later analyses
     """
-    if extractor_type is not ('sift' or 'hog'):
+    
+    if extractor_type  not in ('sift', 'hog'):
         raise ValueError('extraction type not in dictionary')
     training_stacked = []
     train_labels = []
