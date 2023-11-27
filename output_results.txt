@@ -1,0 +1,240 @@
+Image: CHNCXR_0001_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 135.16906389202913
+-------------------
+Image: CHNCXR_0002_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 122.64157459675141
+-------------------
+Image: CHNCXR_0003_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 125.18033702708895
+-------------------
+Image: CHNCXR_0004_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 123.34541971792206
+-------------------
+Image: CHNCXR_0005_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 116.91891431872828
+-------------------
+Image: CHNCXR_0006_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 114.84773258177387
+-------------------
+Image: CHNCXR_0007_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 144.73480765061868
+-------------------
+Image: CHNCXR_0008_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 136.33941692269073
+-------------------
+Image: CHNCXR_0009_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 118.54808032471533
+-------------------
+Image: CHNCXR_0010_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 128.32030921176326
+-------------------
+Image: CHNCXR_0011_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 133.65670769900956
+-------------------
+Image: CHNCXR_0012_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 119.323637067877
+-------------------
+Image: CHNCXR_0013_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 143.39023871111138
+-------------------
+Image: CHNCXR_0014_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 126.15731061554337
+-------------------
+Image: CHNCXR_0015_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 127.35759457364846
+-------------------
+Image: CHNCXR_0016_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 124.42183275324805
+-------------------
+Image: CHNCXR_0017_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 123.0028797355318
+-------------------
+Image: CHNCXR_0018_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 132.863730332438
+-------------------
+Image: CHNCXR_0019_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 138.95060716314842
+-------------------
+Image: CHNCXR_0020_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 127.16305673031908
+-------------------
+Image: CHNCXR_0021_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 122.36285078663398
+-------------------
+Image: CHNCXR_0022_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 122.89178375964435
+-------------------
+Image: CHNCXR_0023_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 123.7946324332451
+-------------------
+Image: CHNCXR_0024_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 120.05388594346591
+-------------------
+Image: CHNCXR_0025_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 129.8289491032965
+-------------------
+Image: CHNCXR_0026_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 132.51115866482328
+-------------------
+Image: CHNCXR_0027_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 122.72097122130924
+-------------------
+Image: CHNCXR_0028_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 120.22490379191862
+-------------------
+Image: CHNCXR_0029_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 129.52250037928434
+-------------------
+Image: CHNCXR_0030_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 114.50454558997635
+-------------------
+Image: CHNCXR_0031_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 120.67734958508179
+-------------------
+Image: CHNCXR_0032_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 122.42557319879327
+-------------------
+Image: CHNCXR_0033_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 120.22563873022114
+-------------------
+Image: CHNCXR_0034_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 136.25266774727027
+-------------------
+Image: CHNCXR_0035_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 122.35805339638415
+-------------------
+Image: CHNCXR_0036_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 123.30523133261849
+-------------------
+Image: CHNCXR_0037_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 130.44344014482326
+-------------------
+Image: CHNCXR_0038_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 117.51133101230731
+-------------------
+Image: CHNCXR_0039_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 128.07034851007185
+-------------------
+Image: CHNCXR_0040_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 130.81505248507435
+-------------------
+Image: CHNCXR_0041_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 121.03415322675929
+-------------------
+Image: CHNCXR_0042_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 121.29144036605818
+-------------------
+Image: CHNCXR_0043_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 136.13520912693372
+-------------------
+Image: CHNCXR_0044_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 129.96279246417689
+-------------------
+Image: CHNCXR_0045_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 129.64031850636974
+-------------------
+Image: CHNCXR_0046_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 142.63181740036637
+-------------------
+Image: CHNCXR_0047_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 117.74712189119558
+-------------------
+Image: CHNCXR_0048_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 124.2015766926612
+-------------------
+Image: CHNCXR_0049_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 122.10333922608189
+-------------------
+Image: CHNCXR_0050_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 133.30695360881762
+-------------------
+Image: CHNCXR_0051_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 122.05888633216814
+-------------------
+Image: CHNCXR_0052_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 130.18902529235714
+-------------------
+Image: CHNCXR_0053_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 112.42477087973074
+-------------------
+Image: CHNCXR_0054_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 123.08409949338572
+-------------------
+Image: CHNCXR_0055_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 122.63106713657969
+-------------------
+Image: CHNCXR_0056_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 129.1320168028951
+-------------------
+Image: CHNCXR_0057_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 134.454306426806
+-------------------
+Image: CHNCXR_0058_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 129.20563657609162
+-------------------
+Image: CHNCXR_0059_0.png, Actual Label: 0, Predicted Label: 0
+Correctly classified
+L1 Norm: 133.3572681151504
+-------------------
+Image: CHNCXR_0448_1.png, Actual Label: 1, Predicted Label: 1
+Correctly classified
+L1 Norm: 90.16860352818331
+-------------------
