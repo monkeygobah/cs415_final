@@ -1,0 +1,2 @@
+k_value,accuracy,precision,recall,f1_score,specificity,auroc_score
+0,0.45112781954887216,0.0,0.0,0.0,1.0,0.6116438356164384
