@@ -22,6 +22,22 @@ def bag_of_words(k, kmeans, data, extractor_type='sift'):
     return histograms
 
 
+def calculate_idf(data, k):
+    n = len(data)
+    idf_scores = np.zeros(k)
+    print(n)
+    for image_histogram in data:
+        unique_visual_words = np.nonzero(image_histogram)[0]
+        idf_scores[unique_visual_words] += 1
+    idf_scores = np.log(n / (1 + idf_scores))  # Adding 1 to avoid division by zero
+    return idf_scores
+
+def calculate_tfidf_histograms(histograms, idf_scores):
+    tfidf_histograms = histograms * idf_scores
+    tfidf_histograms = tfidf_histograms / np.linalg.norm(tfidf_histograms, axis=1, keepdims=True)
+    return tfidf_histograms
+
+
 def assign_label_to_descriptor(descriptor, centers, majority_labels):
     """ 
     Purpose: Take a descriptor and compute the distance to the closest centroid resulting from k means. Assign the descriptor to be a part of whatever
@@ -40,7 +56,7 @@ def assign_label_to_descriptor(descriptor, centers, majority_labels):
     return majority_label
 
 
-def cluster_predict_k_means(k_means, k, training_labels, data_test, accuracies):
+def cluster_predict_k_means(k_means, k, training_labels, data_test, extractor, accuracies):
     """ 
     Purpose: Make predictions on test image features using shortest euclidean distance from clusters
     Assign each cluster a label based on the majority vote of testing descriptors in it. Compare these to gt data and report accuracy
@@ -65,6 +81,8 @@ def cluster_predict_k_means(k_means, k, training_labels, data_test, accuracies):
         else:
             cluster_lists[label]['tb'] += 1
 
+    print(cluster_lists)
+    print(len(cluster_lists))
 
     # assign majority labels to all of the clusters
     majority_labels = {}
@@ -73,12 +91,13 @@ def cluster_predict_k_means(k_means, k, training_labels, data_test, accuracies):
             majority_labels[cluster] = 0
         else:
             majority_labels[cluster] = 1
-    
+    print(majority_labels)
+    print(len(majority_labels))
     # Evaluate the testing data using the clusters with a given K
 
     correct_predictions = 0
     # Loop over the list of descriptors for each image
-    for idx, image_descriptors in enumerate(data_test['sift']):
+    for idx, image_descriptors in enumerate(data_test[extractor]):
         
         image_labels = [assign_label_to_descriptor(desc, k_means.cluster_centers_, majority_labels) for desc in image_descriptors]
         # Assign the majority label to the image
@@ -89,7 +108,7 @@ def cluster_predict_k_means(k_means, k, training_labels, data_test, accuracies):
         if predicted_label == ground_truth:
             correct_predictions += 1
             
-    accuracy = correct_predictions / len(data_test['sift'])
+    accuracy = correct_predictions / len(data_test[extractor])
     print(f"accuracy: {accuracy}")
     accuracies[k] = accuracy
     return accuracies
