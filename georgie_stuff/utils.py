@@ -41,6 +41,15 @@ def sift_kp_des(image):
     sift = cv2.SIFT_create()
     return sift.detectAndCompute(image, None)
 
+def orb_kp_des(image):
+    """ 
+    find PRB keypoints and detection on an image
+    Input: Image
+    Output: ORB kp and descriptors
+    """
+    orb = cv2.ORB_create()
+    return orb.detectAndCompute(image, None)
+
 
 def hog_descriptors(image, corner_coords):
     """ 
@@ -96,7 +105,7 @@ def prepare_data(data_train, extractor_type='sift'):
     returns appropriate data and labels formatted for later analyses
     """
     
-    if extractor_type  not in ('sift', 'hog'):
+    if extractor_type  not in ('sift', 'hog', 'orb'):
         raise ValueError('extraction type not in dictionary')
     training_stacked = []
     train_labels = []
@@ -111,16 +120,16 @@ def prepare_data(data_train, extractor_type='sift'):
     return training_stacked, train_labels
 
 
-def extraction(file, data_dict):
+def descrip_extraction(file, data_dict):
     """ 
     Function to extract Harris corners, sift keypoints, and threshold images and store results in data dictionaries
     Inputs: image, path to file to determine label
     outputs: dictionary containing the metrics
     """
     image = cv2.imread(file, cv2.IMREAD_GRAYSCALE)
-    
+    cont_image = cont_image
     # increase the contrast
-    cont_image = increase_contrast(image)
+    # cont_image = increase_contrast(image)
     
     kp, des = sift_kp_des(cont_image)
     
@@ -132,22 +141,69 @@ def extraction(file, data_dict):
     hog_des = hog_descriptors(cont_image, corners)
     
     
-    thresholds = [127, 150, 170, 200]
-    # get percent white for every image and store in dict
-    for threshold in thresholds:
-        per_white = threshold_image(cont_image, min_val=threshold)
-        
-        if determine_disease(file):
-            data_dict['wp'][str(threshold)].append(per_white)
-        else:
-            data_dict['wp'][str(threshold)].append(per_white)
+    # get orb descriptors and add to dictionary 
+    orb_kp, orb_des = orb_kp_des(cont_image)
     
     # store rest of the data in the dictionary
     if determine_disease(file):
         data_dict['label'].append(1)
         data_dict['sift'].append(des)
         data_dict['hog'].append(hog_des)
+        data_dict['orb'].append(orb_des)
+
     else:
         data_dict['label'].append(0)
         data_dict['sift'].append(des)
         data_dict['hog'].append(hog_des)
+        data_dict['orb'].append(orb_des)
+
+
+def thresh_extract(file, data_dict):
+    image = cv2.imread(file, cv2.IMREAD_GRAYSCALE)
+    
+    # increase the contrast
+    cont_image = increase_contrast(image)
+
+    thresholds = [127, 133, 150, 170, 185, 200, 225]
+    # get percent white for every image and store in dict
+    for threshold in thresholds:
+        per_white = threshold_image(cont_image, min_val=threshold)
+        data_dict[str(threshold)].append(per_white)
+
+    if determine_disease(file):
+        data_dict['label'].append(1)
+        # data_dict[str(threshold)].append(per_white)
+    else:
+        data_dict['label'].append(0)
+        # data_dict[str(threshold)].append(per_white)
+        
+        
+
+def sample_data(data, subset_percent=100):
+    """
+    Sample a subset of the data from the input dictionary.
+
+    Parameters:
+    data (dict): The original dictionary containing the data.
+    subset_percent (float): The percentage of the data to sample (between 0 and 100).
+
+    Returns:
+    dict: A dictionary containing the sampled subset of the data.
+    """
+    # Determine the number of samples to retain
+    num_samples = int(len(data['label']) * (subset_percent / 100.0))
+    
+    # Generate random indices to sample from the data
+    if subset_percent < 100:
+        subset_indices = np.random.choice(len(data['label']), num_samples, replace=False)
+    else:
+        subset_indices = range(len(data['label']))  # Use all data if subset_percent is 100
+
+    # Create a new dictionary to hold the sampled data
+    sampled_data = {key: [] for key in data.keys()}
+    
+    # Iterate through each key and sample the data accordingly
+    for key in data.keys():
+        sampled_data[key] = [data[key][i] for i in subset_indices]
+    
+    return sampled_data
